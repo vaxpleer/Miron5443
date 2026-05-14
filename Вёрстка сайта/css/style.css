@@ -1,0 +1,41 @@
+body{
+  background-color:#621402;
+  font-family: "Roboto", sans-serif;
+}
+
+.user{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.header{
+  display:flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.hello{
+  color:white;
+  margin-right: 11px;
+}
+.menu-link{
+  color:white;
+  text-decoration: none;
+}
+.menu-item{
+  margin-right: 25px;
+}
+.menu{
+  list-style-type: none;
+  display: flex;
+  padding-left: 57px;
+}
+.avatar{
+  width: 33px;
+  height: 33px;
+  border-radius: 50px;
+}
+.container{
+  max-width: 1168px;
+  margin: auto;
+}
