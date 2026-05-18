@@ -13,7 +13,7 @@ body{
   align-items: center;
 }
 .header{
-  min-height: 100vh;
+  padding-bottom: 60px;
   background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url(../img/bg.png) no-repeat center top / cover;
 }
 .navbar{
@@ -21,6 +21,9 @@ body{
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+.nav{
+  position: relative;
 }
 .hello{
   color:white;
@@ -38,6 +41,16 @@ body{
   display: flex;
   padding-left: 57px;
 }
+
+.m-menu {
+  background-color: transparent;
+  border: none;
+  width: 55px;
+  height: 55px;
+  margin-left: 20px;
+  display: none;
+  cursor: pointer;
+}
 .avatar{
   width: 33px;
   height: 33px;
@@ -46,6 +59,7 @@ body{
 .container{
   max-width: 1168px;
   margin: auto;
+  width: 90%;
 }
 
 .film{
@@ -190,6 +204,10 @@ option{
   border-radius: 10px;
   margin-bottom: 40px;
 }
+.scheme-svg{
+  max-width: 1170px;
+  max-height: 600px;
+}
 .scheme path:not(.light, .active){
   fill: rgba(196, 196, 196, 0.21);
   cursor: pointer;
@@ -215,6 +233,7 @@ option{
   padding-top: 22px;
   padding-bottom: 38px;
   max-width: 1024px;
+  width: 90%;
   margin: auto;
 }
 .legend-label{
@@ -254,4 +273,129 @@ option{
   color: white;
   text-decoration: none;
   padding: 24px 52px;
+}
+
+@media (max-width:1200px){
+  .container{
+    max-width: 960px;
+  }
+  .cinema{
+    width: 100%;
+  }
+}
+
+
+@media (max-width:992px){
+  .container {
+    max-width: 750px;
+  }
+  .session{
+    flex-wrap: wrap;
+  }
+  .session-date{
+    flex-basis: 70%;
+    margin-bottom: 50px;
+  }
+  .session-time{
+    order: 2;
+  }
+  .session-cinema{
+    order:3;
+  }
+  .menu-item{
+    margin-right: 20px;
+  }
+}
+
+
+@media (max-width:768px) {
+  .container {
+    max-width: 560px;
+  }
+  .menu{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: opacity 0.4s, transform 0.4s;
+    position: absolute;
+    top:15px;
+    left:70px;
+    margin: 0px;
+    padding: 10px;
+    flex-direction: column;
+    background:rgba(98, 20, 2, 0.8);
+    border:2px solid #fe8e05;
+    border-radius:10px;
+    line-height: 22px;
+    z-index: 10;
+  }
+  .is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .m-menu{
+    display: block;
+  }
+  .film{
+    flex-direction: column;
+  }
+  .film-trailer{
+    margin: auto;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width:768px) {
+  .session-date-item{
+    width: 60px;
+    height: 60px;
+  }
+  .session-day{
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .session-month{
+    font-size: 10px;
+    line-height: 11px;
+  }
+  .session-week{
+    font-size: 13px;
+    line-height: 14px;
+  }
+  .select{
+    margin-top: 16px;
+  }
+  .session-date{
+    margin-bottom: 25px;
+  }
+  .session-time{
+    margin-bottom: 20px;
+  }
+  .film-title-small{
+    font-size: 16px;
+  }
+  .film-title{
+    font-size: 24px;
+  }
+  .film-description{
+    font-size: 12px;
+  }
+  .film{
+    margin-top: 100px;
+  }
+  .button-pay{
+    width: 110px;
+    font-size: 15px;
+    padding: 5px;
+    padding-top: 17px;
+    text-align: center;
+  }
+  .legend{
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .legend-label{
+    margin-top: 6px;
+  }
 }
